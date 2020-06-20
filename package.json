@@ -2,7 +2,13 @@
     "name": "js-web-kit",
     "version": "1.0.0",
     "description": "JavaScript development environment for web apps",
-    "scripts": {},
+    "scripts": {
+        "prestart": "node buildScripts/startMessage.js",
+        "start": "npm-run-all --parallel start:server",
+        "start:server": "node buildScripts/srcServer.js",
+        "poststart": "",
+        "localtunnel": "localtunnel is not working anymore and alternative solution to be found"
+    },
     "author": "Mohammed Ramadan",
     "license": "MIT",
     "dependencies": {},
