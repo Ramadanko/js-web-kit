@@ -3,6 +3,8 @@ import path from 'path';
 import open from 'open';
 import webpack from "webpack";
 import config from '../webpack.config.dev';
+// disable no-console warnings in build files
+/* eslint-disable no-console*/
 
 const port = 3000;
 const app = express();

@@ -3,11 +3,13 @@
     "version": "1.0.0",
     "description": "JavaScript development environment for web apps",
     "scripts": {
-        "prestart": "npx babel-node buildScripts/startMessage.js",
-        "start": "npm-run-all --parallel start:server",
+        "prestart": "babel-node buildScripts/startMessage.js",
+        "start": "npm-run-all --parallel start:server lint:watch",
         "start:server": "babel-node buildScripts/srcServer.js",
         "poststart": "",
-        "localtunnel": "localtunnel is not working anymore and alternative solution to be found"
+        "localtunnel": "localtunnel is not working anymore and alternative solution to be found",
+        "lint": "esw webpack.config* src buildScripts --color",
+        "lint:watch": "npm run lint -- -w"
     },
     "author": "Mohammed Ramadan",
     "license": "MIT",
