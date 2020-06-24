@@ -4,12 +4,14 @@
     "description": "JavaScript development environment for web apps",
     "scripts": {
         "prestart": "babel-node buildScripts/startMessage.js",
-        "start": "npm-run-all --parallel start:server lint:watch",
+        "start": "npm-run-all --parallel start:server lint:watch test:watch",
         "start:server": "babel-node buildScripts/srcServer.js",
         "poststart": "",
         "localtunnel": "localtunnel is not working anymore and alternative solution to be found",
         "lint": "esw webpack.config* src buildScripts --color",
-        "lint:watch": "npm run lint -- -w"
+        "lint:watch": "npm run lint -- -w",
+        "test": "npx mocha --reporter progress --register @babel/register buildScripts/testSetup.js \"src/**/*.test.js\"",
+        "test:watch" : "npm run test -- --watch"
     },
     "author": "Mohammed Ramadan",
     "license": "MIT",
