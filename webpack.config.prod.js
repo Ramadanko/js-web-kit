@@ -32,7 +32,10 @@ export default {
                 minifyJS: true,
                 minifyCSS: true,
                 minifyURLs: true
-            }
+            },
+            // Properties you define here are available in index.html
+            // using htmlWebpackPlugin.options.varName
+            trackJSToken: "INSERT YOUR TOKEN HERE"
         }),
 
         // Cache busting technique.
