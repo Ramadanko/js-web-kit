@@ -1,6 +1,6 @@
 import {expect} from 'chai';
-import {JSDOM} from 'jsdom';
-import fs from 'fs';
+// import {JSDOM} from 'jsdom';
+// import fs from 'fs';
 
 describe('Setup tests', ()=>{
    it('should pass', ()=>{
